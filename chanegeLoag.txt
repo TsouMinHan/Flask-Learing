@@ -1,3 +1,6 @@
+2020.03.09
+create Profile Page and Avatars 
+
 2020.03.04
 專案開始
 
