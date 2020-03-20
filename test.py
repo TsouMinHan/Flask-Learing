@@ -86,4 +86,11 @@ class UserModelCase(unittest.TestCase):
         self.assertEqual(f4, [p4])
 
 if __name__ == '__main__':
-    unittest.main(verbosity=2)
+    # unittest.main(verbosity=2)
+    from flask_mail import Message
+    from app import mail
+    msg = Message('test subject', sender=app.config['ADMINS'][0],
+    recipients=['p87089905@gmail.com'])
+    msg.body = 'text body'
+    msg.html = '<h1>HTML body</h1>'
+    mail.send(msg)
